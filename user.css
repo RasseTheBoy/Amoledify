@@ -1,0 +1,200 @@
+:root {
+  /* Show/Hide images */
+  --display-card-image: none !important;
+  --display-coverart-image: none !important;
+  --display-header-image: none !important;
+  --display-library-image: none !important;
+  --display-tracklist-image: none !important;
+  --display-marketplace-image: none !important;
+
+  /* Show/Hide buttons */
+  --display-miniplayer: none;
+  --display-now-playing: none;
+  --display-browse: none;
+
+  /* Recolor */
+  --spice-main-elevated: var(--spice-main);
+  --spice-shadow: var(--spice-main);
+  --spice-selected-row: var(--spice-subtext);
+  --spice-selected-row: var(--spice-subtext);
+  --spice-button: var(--spice-accent);
+  --spice-button-active: var(--spice-accent-active);
+  --spice-button-disabled: var(--spice-accent-inactive);
+  --spice-tab-active: var(--spice-main);
+  --spice-rgb-main-elevated: var(--spice-rgb-main);
+  --spice-rgb-highlight-elevated: var(--spice-rgb-main);
+  --spice-rgb-sidebar: var(--spice-rgb-main);
+  --spice-rgb-player: var(--spice-rgb-main);
+  --spice-rgb-card: var(--spice-rgb-main);
+  --spice-rgb-shadow: var(--spice-rgb-main);
+  --spice-rgb-selected-row: var(--spice-rgb-subtext);
+  --spice-rgb-button: var(--spice-rgb-accent);
+  --spice-rgb-button-active: var(--spice-rgb-accent-active);
+  --spice-rgb-button-disabled: var(--spice-rgb-accent-inactive);
+  --spice-rgb-tab-active: var(--spice-rgb-main);
+}
+
+
+/* ---General--- */
+
+/* Hide mini-player button */
+button[aria-label='Open Miniplayer'] {
+  display: var(--display-miniplayer);
+}
+
+/* Hide "now playing" button */
+button[data-restore-focus-key="now_playing_view"] {
+  display: var(--display-now-playing);
+}
+
+/* Remove "browse" icon from the search bar */
+button[aria-label='Browse'] {
+  display: var(--display-browse);
+}
+
+/* Remove the "now playing" sidepanel*/
+.Root__right-sidebar:has(.NowPlayingView) {
+  display: none;
+}
+
+
+/* ---Home page--- */
+
+/* Hide "All, Music, Podcasts" buttons */
+.main-home-filterChipsContainer,
+.main-actionButtons {
+    display: none !important;
+}
+
+/* Remove gradiant */
+.main-actionBarBackground-background,
+.main-home-homeHeader,
+.main-entityHeader-gradient,
+.main-entityHeader-backgroundColor {
+  background-color: var(--spice-main) !important;
+}
+
+.main-entityHeader-background {
+  background-image: none !important;
+}
+
+/* Recent shorcut grid background */
+.view-homeShortcutsGrid-shortcut {
+  background-color: var(--spice-main) !important;
+}
+
+/* Recent shortcuts remove images */
+.view-homeShortcutsGrid-imageWrapper {
+  display: none !important;
+}
+
+
+/* images */
+.main-card-imageContainer img,
+.view-homeShortcutsGrid-imageContainer img,
+img.main-image-image {
+  display: var(--display-card-image) !important;
+}
+
+.main-coverSlotCollapsed-container {
+  display: var(--display-coverart-image);
+}
+
+.main-entityHeader-imageContainer,
+.under-main-view,
+.main-entityHeader-creatorWrapper .main-avatar-avatar,
+.playlist-playlist-playlistImageContainer,
+.profile-userOverview-imageContainer {
+  display: var(--display-header-image);
+}
+.x-entityImage-imageContainer img,
+.main-avatar-image {
+  display: var(--display-sidebar-image);
+}
+.main-trackList-rowImage {
+  display: var(--display-tracklist-image);
+}
+
+
+
+/* ---Lyrics--- */
+
+/* Font size */
+.lyrics-lyrics-contentContainer .lyrics-lyrics-contentWrapper {
+  font-size: 2rem !important;
+}
+
+/* Hide lyrics provider */
+.lyrics-lyricsContent-provider {
+  display: none;
+}
+  
+/* Recolor */
+.lyrics-lyrics-container {
+  --lyrics-color-background: var(--spice-main) !important;
+  --lyrics-color-inactive: rgba(255, 255, 255, 0.3) !important;
+  --lyrics-color-passed: rgba(255, 255, 255, 0.1) !important;
+  --lyrics-color-messaging: var(--spice-text) !important;
+}
+
+
+
+/* ---Fullscreen--- */
+
+/* Hide "Playing from" */
+.npv-header,
+.npv-up-next,
+.npv-background-image {
+  display: none !important;
+}
+
+/* Lyrics background color */
+.npv-background-color,
+.npv-main-container {
+  background-color: var(--spice-main) !important;
+  background-image: linear-gradient(var(--spice-main), var(--spice-main)) !important;
+}
+
+/* Lyrics text gradient */
+.npv-lyrics__gradient.npv-lyrics__gradient-background.npv-lyrics__gradient--shown.npv-lyrics__gradient--full-screen {
+  background-image: linear-gradient(transparent, var(--spice-main));
+}
+
+/* "Licenced and Provided by MusicMatch" */
+p.npv-lyrics__text.npv-lyrics__text--credits {
+  display: none;
+}
+
+.npv-lyrics__text {
+  font-size: 5em;
+  line-height: auto;
+  margin: 0 0 0.5em;
+}
+
+
+
+/* ---Other--- */
+
+/* Hide creator top bar*/
+.main-topBar-topbarContent.main-entityHeader-topbarContent.main-entityHeader-topbarContentFadeIn {
+  display: none;
+}
+
+/* Recolor topbar*/
+.main-topBar-background {
+  background-color: var(--spice-main);
+}
+
+
+
+/* ---Marketplace--- */
+
+/* Card background */
+.main-card-card {
+  background: var(--spice-main);
+}
+
+/* Card preview image */
+div.marketplace-grid > div > div > div.main-card-imageContainer {
+  display: var(--display-marketplace-image);
+}
