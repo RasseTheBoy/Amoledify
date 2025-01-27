@@ -70,12 +70,16 @@ button[aria-label='Browse'] {
 .main-actionBarBackground-background,
 .main-home-homeHeader,
 .main-entityHeader-gradient,
-.main-entityHeader-backgroundColor {
+.main-entityHeader-backgroundColor,
+.main-entityHeader-background {
   background-color: var(--spice-main) !important;
+  background-image: none !important;
 }
 
-.main-entityHeader-background {
-  background-image: none !important;
+/* Gradients on the sides */
+.U8wi3gXSb248Imbxy4gc .a2NTH51fJWzWsds0OYv_:after,
+.Yjx8QrpjqgjqQPj4KWCh .a2NTH51fJWzWsds0OYv_:before {
+  opacity: 0;
 }
 
 /* Recent shorcut grid background */
@@ -89,7 +93,8 @@ button[aria-label='Browse'] {
 }
 
 
-/* images */
+
+/* ---Images--- */
 .main-card-imageContainer img,
 .view-homeShortcutsGrid-imageContainer img,
 img.main-image-image {
@@ -165,23 +170,54 @@ p.npv-lyrics__text.npv-lyrics__text--credits {
   display: none;
 }
 
-.npv-lyrics__text {
+/* Lyrics text */
+.spotifyinternal-artistnpv .npv-lyrics__text {
   font-size: 5em;
-  line-height: auto;
-  margin: 0 0 0.5em;
+  line-height: 1;
+  margin: 0 0 1em;
+}
+
+/* Old lyrics, almost tranparent */
+.npv-lyrics__text-wrapper--previous > p {
+  color: rgba(255, 255, 255, 0.1) !important;
 }
 
 
 
-/* ---Other--- */
+/* ---Artist--- */
 
 /* Hide creator top bar*/
 .main-topBar-topbarContent.main-entityHeader-topbarContent.main-entityHeader-topbarContentFadeIn {
   display: none;
 }
 
-/* Recolor topbar*/
-.main-topBar-background {
+/* Artist's popular song background gradient */
+.Bdcf5g__Rug3TGqSdbiy {
+  --background-base-70: rgba(0,0,0,0) !important;
+}
+
+
+/* Podcasts */
+
+/* Recolor */
+.T9iBYqbERZHdwDl0U2tC.dUScIGoP9fWn5IVsztB7, /* "Continue listening" */
+.gYTsg8kvcGmu41_lilIb, /* "Exclusive benefits"*/
+.Bns6t3CfzQaCA4DLRzPQ /* Trailer episode */ {
+  background-color: var(--spice-main);
+}
+
+
+/* ---Other--- */
+
+/* Album background */
+.main-entityHeader-container > div {
+  --background-base: none !important;
+  --background-base-min-contrast: none !important;
+}
+
+/* Recolor topbar and content menu*/
+.main-topBar-background,
+.main-contextMenu-menu {
   background-color: var(--spice-main);
 }
 
