@@ -32,13 +32,22 @@ Designed and developed by [**Rasmus Ohert**](https://github.com/RasseTheBoy)
 
 ### Manual install
 
-#### Linux and MacOS
+#### Go to the Themes directory
 
 ```bash
+# Linux and MacOS
 cd "$(dirname "$(spicetify -c)")/Themes"
+
+# Windows
+cd "$("$(Split-Path -Path "$(spicetify -c)" -Parent)" + "/Themes")"
+```
+
+#### Downoad and apply the theme
+
+```bash
 git clone https://github.com/RasseTheBoy/Amoledify.git
-spicetify config current_theme Amoledify
 spicetify config inject_css 1 replace_colors 1
+spicetify config current_theme Amoledify
 spicetify apply
 ```
 
@@ -75,5 +84,5 @@ spicetify apply
 rm -r "$(dirname "$(spicetify -c)")/Themes/Amoledify"
 
 ## Windows
-rmdir /s /q "%userprofile%\.spicetify\Themes\Amoledify"
+rmdir "$("$(Split-Path -Path "$(spicetify -c)" -Parent)" + "/Themes/Amoledify")"
 ```
