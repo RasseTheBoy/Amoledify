@@ -52,8 +52,8 @@ button[aria-label='Browse'] {
   display: var(--display-browse);
 }
 
-/* Remove the "now playing" sidepanel*/
-.Root__right-sidebar:has(.NowPlayingView) {
+/* Remove elements */
+.Root__right-sidebar:has(.NowPlayingView) /* "now playing" sidepanel*/ {
   display: none;
 }
 
@@ -63,7 +63,7 @@ button[aria-label='Browse'] {
 /* Hide "All, Music, Podcasts" buttons */
 .main-home-filterChipsContainer,
 .main-actionButtons {
-    display: none !important;
+  display: none !important;
 }
 
 /* Remove gradiant */
@@ -87,8 +87,9 @@ button[aria-label='Browse'] {
   background-color: var(--spice-main) !important;
 }
 
-/* Recent shortcuts remove images */
-.view-homeShortcutsGrid-imageWrapper {
+/* Hide element */
+.view-homeShortcutsGrid-imageWrapper, /* Recent shortcuts remove images */
+.main-home-content.contentSpacing section:has([aria-labelledby="listrow-title-picked-for-you"]) /* "Picked for you"*/ {
   display: none !important;
 }
 
