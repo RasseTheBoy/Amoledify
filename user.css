@@ -187,14 +187,19 @@ p.npv-lyrics__text.npv-lyrics__text--credits {
 
 /* ---Artist--- */
 
-/* Hide creator top bar*/
+/* Top bar*/
 .main-topBar-topbarContent.main-entityHeader-topbarContent.main-entityHeader-topbarContentFadeIn {
   display: none;
 }
 
-/* Artist's popular song background gradient */
+/* Popular song background gradient */
 .Bdcf5g__Rug3TGqSdbiy {
   --background-base-70: rgba(0,0,0,0) !important;
+}
+
+/* "About" image*/
+.jW4eWdr_LUeOXwPpKhWG.DRXonbAbVN5Vg9anDL1X {
+  background-image: linear-gradient(var(--spice-main), var(--spice-main)) !important;
 }
 
 
