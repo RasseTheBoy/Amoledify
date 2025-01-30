@@ -57,6 +57,11 @@ button[aria-label='Browse'] {
   display: none;
 }
 
+/* Resize scrollbar smaller */
+.os-theme-spotify.os-scrollbar {
+  --os-size: 3px;
+}
+
 
 /* ---Home page--- */
 
