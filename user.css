@@ -35,6 +35,8 @@
 }
 
 
+
+
 /* ---General--- */
 
 /* Hide mini-player button */
@@ -56,6 +58,8 @@ button[aria-label='Browse'] {
 .Root__right-sidebar:has(.NowPlayingView) /* "now playing" sidepanel*/ {
   display: none;
 }
+
+
 
 
 /* ---Home page--- */
@@ -89,9 +93,11 @@ button[aria-label='Browse'] {
 
 /* Hide element */
 .view-homeShortcutsGrid-imageWrapper, /* Recent shortcuts remove images */
-.main-home-content.contentSpacing section:has([aria-labelledby="listrow-title-picked-for-you"]) /* "Picked for you"*/ {
+section[aria-label="Music videos for you"] /* "Music videos for you" */ 
+{
   display: none !important;
 }
+
 
 
 
@@ -123,6 +129,7 @@ img.main-image-image {
 
 
 
+
 /* ---Lyrics--- */
 
 /* Font size */
@@ -142,6 +149,7 @@ img.main-image-image {
   --lyrics-color-passed: rgba(255, 255, 255, 0.1) !important;
   --lyrics-color-messaging: var(--spice-text) !important;
 }
+
 
 
 
@@ -185,6 +193,7 @@ p.npv-lyrics__text.npv-lyrics__text--credits {
 
 
 
+
 /* ---Artist--- */
 
 /* Top bar*/
@@ -203,7 +212,9 @@ p.npv-lyrics__text.npv-lyrics__text--credits {
 }
 
 
-/* Podcasts */
+
+
+/* ---Podcasts--- */
 
 /* Recolor */
 .T9iBYqbERZHdwDl0U2tC.dUScIGoP9fWn5IVsztB7, /* "Continue listening" */
@@ -211,6 +222,8 @@ p.npv-lyrics__text.npv-lyrics__text--credits {
 .Bns6t3CfzQaCA4DLRzPQ /* Trailer episode */ {
   background-color: var(--spice-main);
 }
+
+
 
 
 /* ---Other--- */
@@ -226,6 +239,7 @@ p.npv-lyrics__text.npv-lyrics__text--credits {
 .main-contextMenu-menu {
   background-color: var(--spice-main);
 }
+
 
 
 
