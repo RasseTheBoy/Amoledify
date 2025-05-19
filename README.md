@@ -4,15 +4,15 @@
 
 ![home](screenshots/home.png)
 
-| ![home](screenshots/home.png) | ![search](screenshots/search.png) | ![library](screenshots/playlist.png) |
-| :---: | :---: | :---: |
-| home | search | playlist |
-| ![artist](screenshots/artist.png) | ![album](screenshots/album.png) | ![podcast](screenshots/podcast.png) |
-| artist | album | podcast |
+|              ![home](screenshots/home.png)              |              ![search](screenshots/search.png)              |          ![library](screenshots/playlist.png)           |
+| :-----------------------------------------------------: | :---------------------------------------------------------: | :-----------------------------------------------------: |
+|                          home                           |                           search                            |                        playlist                         |
+|            ![artist](screenshots/artist.png)            |               ![album](screenshots/album.png)               |           ![podcast](screenshots/podcast.png)           |
+|                         artist                          |                            album                            |                         podcast                         |
 | ![fullscreen-active](screenshots/fullscreen-active.png) | ![fullscreen-inactive](screenshots/fullscreen-inactive.png) | ![fullscreen-lyrics](screenshots/fullscreen-lyrics.png) |
-| fullscreen active | fullscreen inactive | fullscreen lyrics |
-| ![lyrics](screenshots/lyrics.png) | ![marketplace](screenshots/marketplace.png) | ![settings](screenshots/settings.png) |
-| lyrics | marketplace | settings |
+|                    fullscreen active                    |                     fullscreen inactive                     |                    fullscreen lyrics                    |
+|            ![lyrics](screenshots/lyrics.png)            |         ![marketplace](screenshots/marketplace.png)         |          ![settings](screenshots/settings.png)          |
+|                         lyrics                          |                         marketplace                         |                        settings                         |
 
 ## More
 
@@ -85,4 +85,12 @@ rm -r "$(dirname "$(spicetify -c)")/Themes/Amoledify"
 
 ## Windows
 rmdir "$("$(Split-Path -Path "$(spicetify -c)" -Parent)" + "/Themes/Amoledify")"
+```
+
+### Updating the theme
+
+If you do any changes to the theme, remember to udpate spicetify.
+
+```bash
+spicetify apply
 ```

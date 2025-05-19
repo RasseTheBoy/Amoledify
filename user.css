@@ -1,4 +1,8 @@
 :root {
+  /* Aggressive toggles */
+  --display-images: none !important;
+  --display-videos: none !important;
+
   /* Show/Hide images */
   --display-card-image: none !important;
   --display-coverart-image: none !important;
@@ -34,13 +38,19 @@
   --spice-rgb-tab-active: var(--spice-rgb-main);
 }
 
+/* ---Aggressive--- */
+img {
+  display: var(--display-images);
+}
 
-
+video {
+  display: var(--display-videos);
+}
 
 /* ---General--- */
 
 /* Hide mini-player button */
-button[aria-label='Open Miniplayer'] {
+button[aria-label="Open Miniplayer"] {
   display: var(--display-miniplayer);
 }
 
@@ -50,7 +60,7 @@ button[data-restore-focus-key="now_playing_view"] {
 }
 
 /* Remove "browse" icon from the search bar */
-button[aria-label='Browse'] {
+button[aria-label="Browse"] {
   display: var(--display-browse);
 }
 
@@ -59,8 +69,16 @@ button[aria-label='Browse'] {
   display: none;
 }
 
-
-
+/* "Quick preview" */
+/* hide the svg animation*/
+.K06ol8ltPT_atXE_JjUP div {
+  content-visibility: hidden;
+}
+/* add a dotted border so the button is still visible */
+.K06ol8ltPT_atXE_JjUP {
+  border: dotted;
+  border-radius: 15px;
+}
 
 /* ---Home page--- */
 
@@ -93,13 +111,16 @@ button[aria-label='Browse'] {
 
 /* Hide element */
 .view-homeShortcutsGrid-imageWrapper, /* Recent shortcuts remove images */
-section[aria-label="Music videos for you"] /* "Music videos for you" */ 
-{
+section[aria-label="Music videos for you"], /* "Music videos for you" */
+.vYl1kgf1_R18FCmHgdw2, .vYl1kgf1_R18FCmHgdw2>* /* Release announcement */ {
   display: none !important;
 }
 
-
-
+/* Carousel gradients */
+.cZrkCxXnCc7KLZqAqWoz .main-home-content {
+  --carousel-start-chevron-gradient: rgba(0, 0, 0, 0);
+  --carousel-end-chevron-gradient: rgba(0, 0, 0, 0);
+}
 
 /* ---Images--- */
 .main-card-imageContainer img,
@@ -108,7 +129,9 @@ img.main-image-image {
   display: var(--display-card-image) !important;
 }
 
-.main-coverSlotCollapsed-container {
+.main-coverSlotCollapsed-container,
+.PromotionDefaultNativeImage-module_image__SAcfY, /* "New release from" album art */
+.ag7k_TUtB1kcSDM06CkY /* "New release from" artist art */ {
   display: var(--display-coverart-image);
 }
 
@@ -127,9 +150,6 @@ img.main-image-image {
   display: var(--display-tracklist-image);
 }
 
-
-
-
 /* ---Lyrics--- */
 
 /* Font size */
@@ -141,7 +161,7 @@ img.main-image-image {
 .lyrics-lyricsContent-provider {
   display: none;
 }
-  
+
 /* Recolor */
 .lyrics-lyrics-container {
   --lyrics-color-background: var(--spice-main) !important;
@@ -149,9 +169,6 @@ img.main-image-image {
   --lyrics-color-passed: rgba(255, 255, 255, 0.1) !important;
   --lyrics-color-messaging: var(--spice-text) !important;
 }
-
-
-
 
 /* ---Fullscreen--- */
 
@@ -166,7 +183,10 @@ img.main-image-image {
 .npv-background-color,
 .npv-main-container {
   background-color: var(--spice-main) !important;
-  background-image: linear-gradient(var(--spice-main), var(--spice-main)) !important;
+  background-image: linear-gradient(
+    var(--spice-main),
+    var(--spice-main)
+  ) !important;
 }
 
 /* Lyrics text gradient */
@@ -191,9 +211,6 @@ p.npv-lyrics__text.npv-lyrics__text--credits {
   color: rgba(255, 255, 255, 0.1) !important;
 }
 
-
-
-
 /* ---Artist--- */
 
 /* Top bar*/
@@ -203,16 +220,16 @@ p.npv-lyrics__text.npv-lyrics__text--credits {
 
 /* Popular song background gradient */
 .Bdcf5g__Rug3TGqSdbiy {
-  --background-base-70: rgba(0,0,0,0) !important;
+  --background-base-70: rgba(0, 0, 0, 0) !important;
 }
 
 /* "About" image*/
 .jW4eWdr_LUeOXwPpKhWG.DRXonbAbVN5Vg9anDL1X {
-  background-image: linear-gradient(var(--spice-main), var(--spice-main)) !important;
+  background-image: linear-gradient(
+    var(--spice-main),
+    var(--spice-main)
+  ) !important;
 }
-
-
-
 
 /* ---Podcasts--- */
 
@@ -222,9 +239,6 @@ p.npv-lyrics__text.npv-lyrics__text--credits {
 .Bns6t3CfzQaCA4DLRzPQ /* Trailer episode */ {
   background-color: var(--spice-main);
 }
-
-
-
 
 /* ---Other--- */
 
@@ -239,9 +253,6 @@ p.npv-lyrics__text.npv-lyrics__text--credits {
 .main-contextMenu-menu {
   background-color: var(--spice-main);
 }
-
-
-
 
 /* ---Marketplace--- */
 
