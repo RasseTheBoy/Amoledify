@@ -80,6 +80,16 @@ button[aria-label="Browse"] {
   border-radius: 15px;
 }
 
+/* Resize scrollbar smaller */
+.os-theme-spotify.os-scrollbar {
+  --os-size: 3px;
+}
+
+/* Hide "Music video" text and button from left-bottom */
+.main-trackInfo-xsmallBadges {
+  display: none;
+}
+
 /* ---Home page--- */
 
 /* Hide "All, Music, Podcasts" buttons */
