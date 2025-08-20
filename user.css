@@ -65,7 +65,8 @@ button[aria-label="Browse"] {
 }
 
 /* Remove elements */
-.Root__right-sidebar:has(.NowPlayingView) /* "now playing" sidepanel*/ {
+.Root__right-sidebar:has(.NowPlayingView), /* "now playing" sidepanel*/
+.main-contextMenu-menuItemButton.Vz3pFUXmll6fKB5Fc4nd /* "New playlist" in context menu */ {
   display: none;
 }
 
