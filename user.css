@@ -85,8 +85,9 @@ button[aria-label="Browse"] {
   --os-size: 3px;
 }
 
-/* Hide "Music video" text and button from left-bottom */
-.main-trackInfo-xsmallBadges {
+/* Hide "Music video" text and button */
+.main-trackInfo-xsmallBadges, /* left-bottom */
+.main-trackList-rowBadges /* tracklist */ {
   display: none;
 }
 
@@ -103,7 +104,8 @@ button[aria-label="Browse"] {
 .main-home-homeHeader,
 .main-entityHeader-gradient,
 .main-entityHeader-backgroundColor,
-.main-entityHeader-background {
+.main-entityHeader-background,
+.playlist-playlist-actionBarBackground-background {
   background-color: var(--spice-main) !important;
   background-image: none !important;
 }
